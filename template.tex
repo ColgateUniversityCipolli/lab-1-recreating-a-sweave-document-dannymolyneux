@@ -99,12 +99,12 @@ This document provides a basic template for the 2-page labs we will complete eac
 For this lab you will
 \\
 \begin{enumerate}[1.]\itemsep0em
-\item Install R and RStudio
+\item Install \href{https://cran.rstudio.com/} R and \href{https://posit.co/download/rstudio-desktop/} {RStudio}
 \item Install tinytex (if necessary):
       install.packages("tinytex")
-\item Create a GitHub account here, and email me your user- name.
-\item Install GitHub desktop
-\item Accept the LAB 1 assignment here.
+\item Create a GitHub account \href{https://github.com/} {here}, and email me your user- name.
+\item Install \href{https://github.com/apps/desktop} {GitHub desktop}
+\item Accept the LAB 1 assignment \href{https://classroom.github.com/assignment-invitations/49ec7c38806e92bfef8bf3094b9b11d3} {here}.
 \item Recreate this document (except put your name/info at the top) to get used to writing in LATEX and to see the types of things we can do when creating a document to convey statistical information. Make sure to commit and push your work using GitHub desktop as you finish each section.
 \end{enumerate}
 \textbf{Remark:} You will find the class Sweave cheatsheet to be \textit{incredibly} \verb|(\emph{incredibly})| helpful.
@@ -202,11 +202,11 @@ We can also call object values from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 41.01679
+## [1] 40.9404
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-The result is 41.0167874. Note that I did not type the result, but I used the \verb|\Sexpr{} command|.
+The result is 40.9403961. Note that I did not type the result, but I used the \verb|\Sexpr{} command|.
 \subsection{Plotting}
 We can also plot with R.
 \begin{knitrout}\scriptsize
@@ -262,7 +262,7 @@ If we want to print this nicely, we can do so using the xtable package (Dahl et 
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 4.4.2 by xtable 1.8-4 package
-% Tue Jan 21 15:20:22 2025
+% Tue Jan 21 16:25:18 2025
 \begin{table}[H]
 \centering
 \begingroup\small
@@ -282,6 +282,7 @@ Rural Male & Rural Female & Urban Male & Urban Female \\
 \label{VADeaths.tab}
 \end{table}
 
+\section*{References}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -301,7 +302,41 @@ you cite them in your document, the bibliography section will automatically popu
 \newpage
 \onecolumn
 \section{Appendix}
-
-If you have anything extra, you can add it here in the appendix. This can include images or tables that don't work well in the two-page setup, code snippets you might want to share, etc.
+Below is a table from a paper I’m currently working on. Without the analysis object in \texttt{R}, I have to create this table myself.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{l cc cc cc cc}\hline
+Term & SS (Type III) & df & F & p-value & $\epsilon_{p}^{2}$ \\\hline
+(Intercept) &4.95 &1.00 &5.37 &0.0209\\
+White-Poor (Z) &3.17 &1.00 &3.44 &0.0642 & 0.02\\
+Zero-Sum (Z) &17.96 &1.00 &19.48 &<0.0001 & 0.03\\
+Education (Z) &0.39 &1.00 &0.42 &0.5161 & 0.00\\
+Income (Z) &0.16 &1.00 &0.17 &0.6817 & 0.00\\
+Democrat &9.60 &1.00 &10.42 &0.0013 & 0.02\\
+Black-Poor (Z) &1.92 &1.00 &2.08 &0.1496 & 0.00\\
+White-Poor (Z)$\times$Zero-Sum (Z) &7.96 &1.00 &8.63 &0.0034 & 0.01\\
+Residuals &506.92 &550.00\\\hline
+\end{tabular} \label{full.sleep.tab}
+\caption{ANOVA table for Case Study I.}
+\end{center}
+\end{table}
+The palmerpenguins package for R (Horst et al., 2020) provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \href{"penguins.pdf"} 2 is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hldef{(palmerpenguins)}
+\hlkwd{pdf}\hldef{(}\hlsng{"figure/penguins.pdf"}\hldef{,} \hlkwc{width} \hldef{=} \hlnum{8}\hldef{,} \hlkwc{height} \hldef{=} \hlnum{5}\hldef{)}
+\hlkwd{plot}\hldef{(penguins)}
+\hlkwd{dev.off}\hldef{()}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{figure/penguins.pdf}
+\caption{Data on adult foraging penguins near Palmer Station, Antarctica.}
+\label{plot3}
+\end{center}
+\end{figure}
 
 \end{document}
