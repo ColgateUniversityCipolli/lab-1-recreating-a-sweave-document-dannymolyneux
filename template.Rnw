@@ -98,7 +98,7 @@ When we need to show multiple steps, we can create a multi-line equation that is
 8(x-5) + x &= 9(x-5) + 5\\
 8x - 40 + x &= 9x - 45 + 5 \tag{Distributing}\\
 9x - 40 &= 9x - 40 \tag{Combining like terms}\\
-9x &= 9x \tag{Adding 40 to both sides by 9}\\
+9x &= 9x \tag{Adding 40 to both sides}\\
 x &= x \tag{Dividing both sides by 9}
 \end{align*}
 The equality holds for any $x$.
@@ -150,13 +150,13 @@ hist(rexp(100))
 \end{center}
 \end{figure}
 \subsection{Tables}
-Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 (Molyneaux et al., 1947).
+Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 \citep{9abfb448-e032-3b5b-972c-40954bc7e23c}.
 <<size='scriptsize'>>=
 data(VADeaths)
 head(VADeaths) # Take a peek of the data
 @
 
-If we want to print this nicely, we can do so using the xtable package (Dahl et al., 2019), which we can reference using the label (Table \href{VADeaths.tab} 1). 
+If we want to print this nicely, we can do so using the xtable package \citep{xtable}, which we can reference using the label (Table \href{VADeaths.tab} 1). 
 <<size='scriptsize'>>=
 library(xtable)
 sleep.table<-xtable(VADeaths ,
@@ -169,14 +169,12 @@ sleep.table<-xtable(VADeaths ,
 print(sleep.table,
 table.placement = "H", include.rownames=FALSE, size = "small")
 @
-\section*{References}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{2em}
 
-\noindent\textbf{Bibliography:} Note that when you add citations to your bib.bib file \emph{and}
-you cite them in your document, the bibliography section will automatically populate here.
+
 
 \begin{tiny}
 \bibliography{bib}
@@ -207,7 +205,7 @@ Residuals &506.92 &550.00\\\hline
 \caption{ANOVA table for Case Study I.}
 \end{center}
 \end{table}
-The palmerpenguins package for R (Horst et al., 2020) provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \href{"penguins.pdf"} 2 is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
+The palmerpenguins package for R \citep{Horst2020} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \href{"penguins.pdf"} 2 is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
 <<eval=FALSE, plot3, size='scriptsize'>>=
 library(palmerpenguins)
 pdf("figure/penguins.pdf", width = 8, height = 5)

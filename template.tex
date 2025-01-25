@@ -149,7 +149,7 @@ When we need to show multiple steps, we can create a multi-line equation that is
 8(x-5) + x &= 9(x-5) + 5\\
 8x - 40 + x &= 9x - 45 + 5 \tag{Distributing}\\
 9x - 40 &= 9x - 40 \tag{Combining like terms}\\
-9x &= 9x \tag{Adding 40 to both sides by 9}\\
+9x &= 9x \tag{Adding 40 to both sides}\\
 x &= x \tag{Dividing both sides by 9}
 \end{align*}
 The equality holds for any $x$.
@@ -202,11 +202,11 @@ We can also call object values from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 40.9404
+## [1] 41.09566
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-The result is 40.9403961. Note that I did not type the result, but I used the \verb|\Sexpr{} command|.
+The result is 41.0956623. Note that I did not type the result, but I used the \verb|\Sexpr{} command|.
 \subsection{Plotting}
 We can also plot with R.
 \begin{knitrout}\scriptsize
@@ -232,7 +232,7 @@ We can also plot with R.
 \end{center}
 \end{figure}
 \subsection{Tables}
-Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 (Molyneaux et al., 1947).
+Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 \citep{9abfb448-e032-3b5b-972c-40954bc7e23c}.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -250,7 +250,7 @@ Below, we load and take a peek at some data about the death rates per 1000 in Vi
 \end{kframe}
 \end{knitrout}
 
-If we want to print this nicely, we can do so using the xtable package (Dahl et al., 2019), which we can reference using the label (Table \href{VADeaths.tab} 1). 
+If we want to print this nicely, we can do so using the xtable package \citep{xtable}, which we can reference using the label (Table \href{VADeaths.tab} 1). 
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -262,7 +262,7 @@ If we want to print this nicely, we can do so using the xtable package (Dahl et 
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 4.4.2 by xtable 1.8-4 package
-% Tue Jan 21 16:25:18 2025
+% Sat Jan 25 17:29:06 2025
 \begin{table}[H]
 \centering
 \begingroup\small
@@ -282,14 +282,12 @@ Rural Male & Rural Female & Urban Male & Urban Female \\
 \label{VADeaths.tab}
 \end{table}
 
-\section*{References}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{2em}
 
-\noindent\textbf{Bibliography:} Note that when you add citations to your bib.bib file \emph{and}
-you cite them in your document, the bibliography section will automatically populate here.
+
 
 \begin{tiny}
 \bibliography{bib}
@@ -320,7 +318,7 @@ Residuals &506.92 &550.00\\\hline
 \caption{ANOVA table for Case Study I.}
 \end{center}
 \end{table}
-The palmerpenguins package for R (Horst et al., 2020) provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \href{"penguins.pdf"} 2 is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
+The palmerpenguins package for R \citep{Horst2020} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \href{"penguins.pdf"} 2 is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
