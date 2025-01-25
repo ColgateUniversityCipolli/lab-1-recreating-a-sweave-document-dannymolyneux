@@ -46,7 +46,6 @@ This document provides a basic template for the 2-page labs we will complete eac
 
 \section{Introduction}
 For this lab you will
-\\
 \begin{enumerate}[1.]\itemsep0em
 \item Install \href{https://cran.rstudio.com/} R and \href{https://posit.co/download/rstudio-desktop/} {RStudio}
 \item Install tinytex (if necessary):
@@ -65,6 +64,7 @@ For this lab you will
 \subsection{Bold, Italics, and Underlining}
 We can \textbf{bold}, \textit{italicize}, \underline{underline}, and \emph{emphasize} text in Sweave.\\
 \indent{Note, I did a column break here so that the list wasn’t broken across columns.}
+\columnbreak
 \subsection{Lists, and Numbered Lists}
 We can write an unordered list in Sweave.
 \begin{itemize}\itemsep0em
